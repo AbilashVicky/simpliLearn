@@ -156,6 +156,7 @@ class Base1 {
     public void fileManager() throws IOException {
         try {
             int option = myScanner.nextInt();
+            System.out.println("|-----------------------------------------------------------------|");
             switch (option) {
                 case 1:
                     System.out.println("Enter your new file name: ");

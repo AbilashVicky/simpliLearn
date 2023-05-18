@@ -16,7 +16,7 @@ public class Main {
         Base my = new Base();
         myF.start();
         my.run();
-        myF.listFiles(); 
+        myF.listFiles();
         myF.fileManager();
         myF.reOption();
     }
@@ -201,7 +201,7 @@ class Base1 {
                     System.out.println("Thank you for your time!");
                     System.exit(-1);
                 default:
-                    System.err.println("Invalid input. ");
+                    System.out.println("Invalid input.");
                     System.out.println("|-----------------------------------------------------------------|");
                     options();
             }

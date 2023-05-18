@@ -7,7 +7,23 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-public class Base extends Thread{
+public class Main {
+    public static void main(String[] args) throws IOException {
+        System.out.println("Welcome to the application!");
+        System.out.println("Project name: Final Project");
+        System.out.println("This application is developed by Full Stack Developer: Abilash Ravi.");
+        System.out.println("|---------------------------------------------------------------------|");
+        Base1 myF = new Base1();
+        Base my = new Base();
+        myF.start();
+        my.run();
+        myF.listFiles();
+        myF.fileManager();
+        myF.reOption();
+    }
+}
+
+class Base extends Thread{
     public void run() {
         try {
             Thread.sleep(1000);
@@ -18,7 +34,7 @@ public class Base extends Thread{
     }
 }
 
-public class Base1 {
+class Base1 {
     Scanner myScanner = new Scanner(System.in);
     String directory;
 
@@ -226,18 +242,4 @@ public class Base1 {
     }
 }
 
-public class Main {
-    public static void main(String[] args) throws IOException {
-        System.out.println("Welcome to the application!");
-        System.out.println("Project name: Final Project");
-        System.out.println("This application is developed by Full Stack Developer: Abilash Ravi.");
-        System.out.println("|---------------------------------------------------------------------|");
-        Base1 myF = new Base1();
-        Base my = new Base();
-        myF.start();
-        my.run();
-        myF.listFiles();
-        myF.fileManager();
-        myF.reOption();
-    }
-}
+

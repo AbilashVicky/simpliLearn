@@ -235,7 +235,6 @@ class Base1 {
                 System.exit(-1);
             } else {
                 System.err.println("Invalid input.");
-                System.out.println("|-----------------------------------------------------------------|");
                 reOption();
             }
         } catch (InputMismatchException e) {

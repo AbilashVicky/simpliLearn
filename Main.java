@@ -233,7 +233,7 @@ public class Main {
         System.out.println("This application is developed by Full Stack Developer: Abilash Ravi.");
         System.out.println("|---------------------------------------------------------------------|");
         Base1 myF = new Base1();
-        Base my = new Base(); //"C:\Users\harini\IdeaProjects"
+        Base my = new Base();
         myF.start();
         my.run();
         myF.listFiles();

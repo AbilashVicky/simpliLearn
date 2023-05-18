@@ -1,5 +1,4 @@
-package myPackage;
-import java.io.IOException;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
@@ -17,7 +16,7 @@ public class Main {
         Base my = new Base();
         myF.start();
         my.run();
-        myF.listFiles();
+        myF.listFiles(); 
         myF.fileManager();
         myF.reOption();
     }
@@ -122,9 +121,11 @@ class Base1 {
                     options();
                     break;
                 case 2:
+                    System.out.println("|-----------------------------------------------------------------|");
                     options();
                     break;
                 case 0:
+                    System.out.println("|-----------------------------------------------------------------|");
                     System.out.println("Thank you for your time!");
                     System.exit(-1);
                     break;
@@ -218,6 +219,7 @@ class Base1 {
         System.out.println("Enter 0 to exit the application.");
         try {
             int option1 = myScanner.nextInt();
+            System.out.println("|-----------------------------------------------------------------|");
             if (option1 == 1) {
                 System.out.println("Enter the file directory: ");
                 myScanner.nextLine();

@@ -230,7 +230,6 @@ class Base1 {
                 options();
                 fileManager();
             } else if (option1 == 0) {
-                System.out.println("|-----------------------------------------------------------------|");
                 System.out.println("Thank you for your time!");
                 System.exit(-1);
             } else {

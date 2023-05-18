@@ -198,7 +198,6 @@ class Base1 {
                     reOption();
                     break;
                 case 4:
-                    System.out.println("|-----------------------------------------------------------------|");
                     System.out.println("Thank you for your time!");
                     System.exit(-1);
                 default:

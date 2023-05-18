@@ -43,22 +43,30 @@ class Base1 {
             int option = myScanner.nextInt();
             switch (option) {
                 case 1:
+                    System.out.println("***************************");
                     System.out.println("Welcome to the application!");
+                    System.out.println("***************************");
                     myScanner.nextLine();
                     System.out.println("|-----------------------------------------------------------------|");
                     break;
                 case 0:
-                    System.out.println("|-----------------------------------------------------------------|");
+                    System.out.println("************************");
                     System.out.println("Thank you for your time!");
+                    System.out.println("************************");
+                    System.out.println("|-----------------------------------------------------------------|");
                     System.exit(-1);
                     break;
                 default:
-                    System.err.println("Invalid input. ");
+                    System.out.println("**************");
+                    System.out.println("Invalid input. ");
+                    System.out.println("**************");
                     System.out.println("|-----------------------------------------------------------------|");
                     start();
             }
         } catch (InputMismatchException e) {
-            System.err.println("Invalid input.");
+            System.out.println("**************");
+            System.out.println("Invalid input.");
+            System.out.println("**************");
             System.out.println("|-----------------------------------------------------------------|");
             myScanner.next();
             start();
@@ -69,12 +77,16 @@ class Base1 {
         directory = myScanner.nextLine();
         File file = new File(directory);
         if (file.isDirectory()) {
+            System.out.println("*******************************************************");
             System.out.println("Directory exists: " + directory);
+            System.out.println("*******************************************************");
             System.out.println("|-----------------------------------------------------------------|");
             System.out.println("Enter 1 to list files / Enter 2 to continue without listing / Enter 0 to exit the app: ");
             isDirectory();
         } else {
-            System.out.println("Directory does not exist. ");
+            System.out.println("*************************");
+            System.out.println("Directory does not exist.");
+            System.out.println("*************************");
             System.out.println("|-----------------------------------------------------------------|");
             opt();
         }
@@ -87,7 +99,10 @@ class Base1 {
             int option = myScanner.nextInt();
             switch (option) {
                 case 0:
+                    System.out.println("************************");
                     System.out.println("Thank you for your time!");
+                    System.out.println("************************");
+                    System.out.println("|-----------------------------------------------------------------|");
                     System.exit(-1);
                     break;
                 case 1:
@@ -96,12 +111,16 @@ class Base1 {
                     listFiles();
                     break;
                 default:
-                    System.err.println("Invalid input.");
+                    System.out.println("**************");
+                    System.out.println("Invalid input.");
+                    System.out.println("**************");
                     System.out.println("|-----------------------------------------------------------------|");
                     opt();
             }
         } catch (InputMismatchException e) {
-            System.err.println("Invalid input.");
+            System.out.println("**************");
+            System.out.println("Invalid input.");
+            System.out.println("**************");
             System.out.println("|-----------------------------------------------------------------|");
             myScanner.next();
             opt();
@@ -115,9 +134,13 @@ class Base1 {
                 case 1:
                     File myFile = new File(directory);
                     List myList = Arrays.asList(myFile.list());
+                    System.out.println("******************************");
+                    int count = 1;
                     for (int i = 0; i < myList.size(); i++) {
-                        System.out.println(myList.get(i));
+                            System.out.println(count + ". " + myList.get(i));
+                            count++;
                     }
+                    System.out.println("******************************");
                     System.out.println("|-----------------------------------------------------------------|");
                     options();
                     break;
@@ -127,18 +150,25 @@ class Base1 {
                     break;
                 case 0:
                     System.out.println("|-----------------------------------------------------------------|");
+                    System.out.println("************************");
                     System.out.println("Thank you for your time!");
+                    System.out.println("************************");
+                    System.out.println("|-----------------------------------------------------------------|");
                     System.exit(-1);
                     break;
                 default:
-                    System.err.println("Invalid option!");
+                    System.out.println("**************");
+                    System.out.println("Invalid input!");
+                    System.out.println("**************");
                     System.out.println("|-----------------------------------------------------------------|");
                     System.out.println("Enter 1 to list files / Enter 2 to continue without listing / Enter 0 to exit the app : ");
                     isDirectory();
                     break;
             }
         } catch (InputMismatchException e) {
-            System.err.println("Invalid input.");
+            System.out.println("**************");
+            System.out.println("Invalid input.");
+            System.out.println("**************");
             System.out.println("|-----------------------------------------------------------------|");
             System.out.println("Enter 1 to list files / Enter 2 to continue without listing / Enter 0 to exit the app: ");
             myScanner.next();
@@ -164,7 +194,9 @@ class Base1 {
                     String filename = myScanner.nextLine();
                     File newFile = new File(directory + "//" + filename);
                     newFile.createNewFile();
+                    System.out.println("***************************************************");
                     System.out.println("The new file has been created: " + newFile.getName());
+                    System.out.println("***************************************************");
                     System.out.println("|-----------------------------------------------------------------|");
                     reOption();
                     break;
@@ -175,10 +207,14 @@ class Base1 {
                     File newFile1 = new File(directory + "//" + fileName);
                     if (newFile1.exists()) {
                         newFile1.delete();
+                        System.out.println("*************************************************");
                         System.out.println("The file has been deleted: " + newFile1.getName());
+                        System.out.println("*************************************************");
                         System.out.println("|-----------------------------------------------------------------|");
                     } else {
+                        System.out.println("**********************************************");
                         System.out.println("The file does not exit: " + newFile1.getName());
+                        System.out.println("**********************************************");
                         System.out.println("|-----------------------------------------------------------------|");
                     }
                     reOption();
@@ -189,25 +225,37 @@ class Base1 {
                     String searchFile = myScanner.nextLine();
                     File myFile = new File(directory + "//" + searchFile);
                     if (myFile.exists()) {
+                        System.out.println("**************************************");
                         System.out.println("The file exists: " + myFile.getName());
+                        System.out.println("**************************************");
                         System.out.println("|-----------------------------------------------------------------|");
                     } else {
+                        System.out.println("******************************************");
                         System.out.println("The file doesn't exit: " + myFile.getName());
+                        System.out.println("******************************************");
                         System.out.println("|-----------------------------------------------------------------|");
                     }
                     reOption();
                     break;
                 case 4:
+                    System.out.println("************************");
                     System.out.println("Thank you for your time!");
+                    System.out.println("************************");
+                    System.out.println("|-----------------------------------------------------------------|");
                     System.exit(-1);
                 default:
+                    System.out.println("**************");
                     System.out.println("Invalid input.");
+                    System.out.println("**************");
                     System.out.println("|-----------------------------------------------------------------|");
                     options();
             }
             fileManager();
         } catch (InputMismatchException e) {
-            System.err.println("Invalid input.");
+            System.out.println("|-----------------------------------------------------------------|");
+            System.out.println("**************");
+            System.out.println("Invalid input.");
+            System.out.println("**************");
             System.out.println("|-----------------------------------------------------------------|");
             myScanner.next();
             options();
@@ -230,19 +278,32 @@ class Base1 {
                 options();
                 fileManager();
             } else if (option1 == 0) {
+                System.out.println("************************");
                 System.out.println("Thank you for your time!");
+                System.out.println("************************");
+                System.out.println("|-----------------------------------------------------------------|");
                 System.exit(-1);
             } else {
-                System.err.println("Invalid input.");
+                System.out.println("**************");
+                System.out.println("Invalid input.");
+                System.out.println("**************");
+                System.out.println("|-----------------------------------------------------------------|");
                 reOption();
             }
         } catch (InputMismatchException e) {
-            System.err.println("Invalid input.");
+            System.out.println("**************");
+            System.out.println("Invalid input.");
+            System.out.println("**************");
             System.out.println("|-----------------------------------------------------------------|");
             myScanner.next();
             reOption();
         }
     }
 }
+
+
+
+
+
 
 

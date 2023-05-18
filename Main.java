@@ -48,6 +48,7 @@ class Base1 {
                     System.out.println("|-----------------------------------------------------------------|");
                     break;
                 case 0:
+                    System.out.println("|-----------------------------------------------------------------|");
                     System.out.println("Thank you for your time!");
                     System.exit(-1);
                     break;
